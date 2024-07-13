@@ -1,9 +1,39 @@
-<div class="parent-fragment" th:fragment="parent(content)">
-    <h1>This is base fragment</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, molestiae!</p>
-    <div th:replace="${content}"></div>
+<!DOCTYPE html>
+<html 
+th:fragment="parent(content,title,script)"
+lang="en" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title data-th-replace="${title}">SCM</title>
+</head>
+<body>
+<ul class='p-4'>
+    <li >
+        <a data-th-href="@{'/about'}">About</a>
+    </li>
+    <li>
+        <a data-th-href="@{/home}">Home</a>
+    </li>
+    <li>
+        <a data-th-href="@{/services}">Services</a>
+    </li>
+</ul>
+<div class="p-4">
+    <section  data-th-replace="${content}">
+
+    </section>
 </div>
-<div th:fragment="test(content)">
-    <h1>Testing fragment</h1>
-    <div th:replace="${content}"></div>
-</div>
+    
+
+<footer class='p-4'>
+    Created By Explorer Aadi
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script data-th-replace="${script}"></script>
+</body>
+</html>
