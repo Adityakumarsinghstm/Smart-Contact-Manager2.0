@@ -6,29 +6,29 @@
         <title>Home Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <style>
-            .container{
-                margin: auto;
-                width: 50%;
-                padding: 30px;
-                background-color : #e2e2e2;
-            }
-        </style>
+        <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+        
 
     </head>
     <body>
-        <div class="container">
-            <h1 >Name : <span data-th-text="${name}"></span></h1>
+        <div class=" bg-gray-200 w-1/2 p-4 mx-auto mt-4 flex flex-col justify-center items-center space-y-3">
+            <h1 class="text-2xl font-bold">Name : <span data-th-text="${name}"></span></h1>
 
             <h2>GitHub Profile :<span data-th-text="${gitHub}"> </span></h2>
             <a data-th-href="${gitHub}"/> Click Here to open profile </a>
 
             <h1>Welcome to the Home Page</h1>
-            <p> Yes, it is possible to have multiple versions of Java installed on a single system simultaneously. This is useful if you need to work on projects that require different versions of the Java Development Kit (JDK). Here’s how you can manage multiple Java versions on a single system:  </p>
+            <p class="text-gray-700"> Yes, it is possible to have multiple versions of Java installed on a single system simultaneously. This is useful if you need to work on projects that require different versions of the Java Development Kit (JDK). Here’s how you can manage multiple Java versions on a single system:  </p>
        
+            <div>
+                <button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Here</button>
+            </div>
+            
         </div>
         
         
+
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     </body>
 </html>

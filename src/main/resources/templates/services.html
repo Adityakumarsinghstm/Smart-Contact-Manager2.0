@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Services Page</h1>
+    <div th:insert="~{base :: parent(~{::.third_content }{::#second_content})}">
+        <section id="main_content">
+            <h1>This is main content page in Services</h1>
+        </section>
+        <section id="second_content">
+            <h1>This is second content page in Services</h1>
+        </section>
+        <section class="third_content">
+            <h1>This is Third content page in Services</h1>
+        </section>
+
+    </div>
+</body>
+</html>
